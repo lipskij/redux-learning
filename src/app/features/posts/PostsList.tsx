@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-interface Post {
+export interface Post {
   id: string;
   title: string;
   content: string;
@@ -13,6 +14,9 @@ export const PostsList: React.FC = () => {
     <article className="post-excerpt" key={id}>
       <h3>{title}</h3>
       <p className="post-content">{content}</p>
+      <Link to={`/posts/${id}`} className="button muted-button">
+        View Post
+      </Link>
     </article>
   ));
 

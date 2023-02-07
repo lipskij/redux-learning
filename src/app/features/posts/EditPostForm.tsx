@@ -1,12 +1,21 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { postAdded } from './postsSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Post } from './PostsList';
+import { postUpdated } from './postsSlice';
 
-export const AddPostForm: React.FC = () => {
-  const [title, setTitle] = useState<string>('');
-  const [content, setContent] = useState<string>('');
+export const EditPostForm: React.FC = () => {
+  const { postId } = useParams<{ postId: string }>();
+
+  const post = useSelector((state: any) =>
+    state.posts.find((post: Post) => post.id === postId),
+  );
+
+  const [title, setTitle] = useState<string>(post.title);
+  const [content, setContent] = useState<string>(post.content);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const onTitleChanged = (e: React.FormEvent<HTMLInputElement>) =>
     setTitle(e.currentTarget.value);
@@ -16,16 +25,14 @@ export const AddPostForm: React.FC = () => {
 
   const onSavePostClicked = () => {
     if (title && content) {
-      dispatch(postAdded({title, content}));
-
-      setTitle('');
-      setContent('');
+      dispatch(postUpdated({ id: postId, title, content }));
+      navigate(`/posts/${postId}`);
     }
   };
 
   return (
     <section>
-      <h2>Add a New Post</h2>
+      <h2>Edit Post</h2>
       <form>
         <label htmlFor="postTitle">Post Title:</label>
         <input
