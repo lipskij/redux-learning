@@ -1,5 +1,5 @@
 import "./App.css";
-import AddTodo from "./app/features/addTodo/addTodo";
+import AddTodo from "./app/features/addTodo/AddTodo";
 
 function App() {
   return (

@@ -1,9 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, selectAddTodo } from "./addTodoSlice";
+import { addTodo, selectTodo } from "./addTodoSlice";
+import { TodoList } from "./TodoList";
 
 const AddTodo = () => {
-  const add = useSelector(selectAddTodo);
+  const add = useSelector(selectTodo);
   const dispatch = useDispatch();
   const [todo, setTodo] = React.useState("");
 
@@ -40,9 +41,7 @@ const AddTodo = () => {
           gap: "0.5rem",
         }}
       >
-        {add.map((item, index) => {
-          return <span key={index}>{item}</span>;
-        })}
+        <TodoList todos={add} />
       </div>
     </div>
   );
