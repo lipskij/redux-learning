@@ -7,7 +7,7 @@ export const addTodoSlice = createSlice({
   },
   reducers: {
     addTodo: (state, action) => {
-      state.value.push(action.payload);
+      state.value = [...state.value, action.payload];
     },
   },
 });

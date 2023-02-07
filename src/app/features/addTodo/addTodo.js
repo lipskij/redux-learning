@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo } from "./addTodoSlice";
+import { addTodo, selectAddTodo } from "./addTodoSlice";
 
 const AddTodo = () => {
+  const add = useSelector(selectAddTodo);
   const dispatch = useDispatch();
-  const add = useSelector((state) => state.addTodo.value);
   const [todo, setTodo] = React.useState("");
 
   return (
@@ -22,11 +22,16 @@ const AddTodo = () => {
           onChange={(e) => setTodo(e.target.value)}
           value={todo}
         />
-        <button type="submit" onClick={(e) => {
-          e.preventDefault();
-          dispatch(addTodo(todo));
-          setTodo("");
-        }}>Add Todo</button>
+        <button
+          type='submit'
+          onClick={(e) => {
+            e.preventDefault();
+            dispatch(addTodo(todo));
+            setTodo("");
+          }}
+        >
+          Add Todo
+        </button>
       </form>
       <div
         style={{
