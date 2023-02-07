@@ -16,6 +16,6 @@ You will also see any lint errors in the console.
 
 have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-**Warning**
-
-The example app is not meant as a complete production-ready project.
+| :warning: WARNING          |
+|:---------------------------|
+| I should warn you the example app is not meant as a complete production-ready project.     |
