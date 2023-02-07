@@ -1,8 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
-import addTodoSlice from "./features/addTodo/addTodoSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import postsReducer from './features/posts/postsSlice';
 
 export default configureStore({
   reducer: {
-    addTodo: addTodoSlice,
+    posts: postsReducer,
   },
 });

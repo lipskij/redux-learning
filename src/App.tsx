@@ -1,14 +1,18 @@
-import "./App.css";
-import AddTodo from "./app/features/addTodo/AddTodo";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { PostsList } from './app/features/posts/PostsList';
+
+import { Navbar } from './app/Navbar';
 
 function App() {
   return (
-    <div style={{
-      display: "flex",
-      padding: "10px",
-    }}>
-     <AddTodo />
-    </div>
+    <Router>
+      <Navbar />
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<PostsList />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

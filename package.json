@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mswjs/data": "^0.8.4",
     "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -12,11 +13,20 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "bootstrap": "^5.2.3",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.12.0",
+    "faker": "^4.1.0",
+    "miragejs": "^0.1.35",
+    "mock-socket": "^9.0.3",
+    "msw": "^0.36.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
+    "redux": "^4.2.1",
+    "seedrandom": "^3.0.5",
+    "txtgen": "^2.2.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -42,5 +52,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-redux": "^7.1.25",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "eslint": "^8.33.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "2.8.3",
+    "typescript": "^4.9.5"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
