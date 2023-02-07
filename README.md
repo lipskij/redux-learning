@@ -19,3 +19,7 @@ have to ever use `eject`. The curated feature set is suitable for small and midd
 | :warning: WARNING          |
 |:---------------------------|
 | I should warn you the example app is not meant as a complete production-ready project.     |
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cf412d8b-42d4-4003-bec1-4bee6f4c53a2/deploy-status)](https://app.netlify.com/sites/app-redux/deploys)
+
+[Live version](https://app-redux.netlify.app/)
