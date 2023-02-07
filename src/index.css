@@ -105,6 +105,12 @@ section h1 {
   font-size: 3rem;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 /* Posts list */
 
 .post h2 {
@@ -135,13 +141,14 @@ p.post-content {
   margin-top: 10px;
 }
 
-.button {
+button {
   display: inline-block;
   background: #1976d2;
   color: white;
   border-radius: 4px;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
+  border: none;
 }
 
 button:disabled,
